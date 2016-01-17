@@ -1,6 +1,6 @@
 Package.describe({
   name: 'mantarayar:shortid',
-  version: '0.0.1',
+  version: '0.1.0',
   // Brief, one-line summary of the package.
   summary: 'Amazingly short non-sequential url-friendly unique id generator.',
   // URL to the Git repository containing the source code for this package.
