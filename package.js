@@ -12,7 +12,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.addFiles('mantarayar:shortid.js');
+  api.use('random');
+  api.addFiles('mantarayar_shortid.js');
   api.addFiles('lib/_/bootstrap.js');
   api.addFiles('lib/random/random-byte.js');
   api.addFiles('lib/random/random-from-seed.js');
@@ -21,11 +22,13 @@ Package.onUse(function(api) {
   api.addFiles('lib/decode.js');
   api.addFiles('lib/encode.js');
   api.addFiles('lib/index.js');
+  api.export(['ShortId']);
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('mantarayar:shortid');
+  api.use('random');
+  api.addFiles('mantarayar_shortid.js');
   api.addFiles('lib/_/bootstrap.js');
   api.addFiles('lib/random/random-byte.js');
   api.addFiles('lib/random/random-from-seed.js');
@@ -34,5 +37,5 @@ Package.onTest(function(api) {
   api.addFiles('lib/decode.js');
   api.addFiles('lib/encode.js');
   api.addFiles('lib/index.js');
-  api.addFiles('mantarayar:shortid-tests.js');
+  api.addFiles('mantarayar_shortid-tests.js');
 });
